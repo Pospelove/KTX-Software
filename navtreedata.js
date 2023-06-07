@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Khronos Texture Software", "index.html", [
-    [ "Abstract", "abstract.html", null ],
+    [ "Abstract", "md_pkgdoc_2pages.html", null ],
     [ "libktx", "libktx_main.html", null ],
     [ "KTX Tools", "ktxtools.html", [
       [ "ktx2check", "ktxtools.html#autotoc_md2", null ],
@@ -35,10 +35,10 @@ var NAVTREE =
       [ "toktx", "ktxtools.html#autotoc_md6", null ]
     ] ],
     [ "Authors", "authors.html", null ],
-    [ "To Do List", "todo.html", [
-      [ "library", "todo.html#autotoc_md9", null ],
-      [ "library testing", "todo.html#autotoc_md10", null ],
-      [ "toktx", "todo.html#autotoc_md11", null ]
+    [ "To Do List", "md_TODO.html", [
+      [ "library", "md_TODO.html#autotoc_md9", null ],
+      [ "library testing", "md_TODO.html#autotoc_md10", null ],
+      [ "toktx", "md_TODO.html#autotoc_md11", null ]
     ] ],
     [ "Javascript Bindings", "js_bindings.html", "js_bindings" ]
   ] ]
@@ -46,7 +46,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"abstract.html"
+"authors.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

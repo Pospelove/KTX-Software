@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['verbose_0',['verbose',['../structktxAstcParams.html#a6ca13a756a2066f8082772b9207e4bba',1,'ktxAstcParams::verbose()'],['../structktxBasisParams.html#a6ca13a756a2066f8082772b9207e4bba',1,'ktxBasisParams::verbose()']]],
+  ['verbose_0',['verbose',['../structktxAstcParams.html#a6ca13a756a2066f8082772b9207e4bba',1,'ktxAstcParams::verbose'],['../structktxBasisParams.html#a6ca13a756a2066f8082772b9207e4bba',1,'ktxBasisParams::verbose']]],
   ['viewtype_1',['viewType',['../structktxVulkanTexture.html#a3da1a8fe11560f0b2fa98a07e12a1fb7',1,'ktxVulkanTexture']]],
   ['vkdestroyimage_2',['vkDestroyImage',['../structktxVulkanTexture.html#ab0a61f410df5e84b033e0628354286b1',1,'ktxVulkanTexture']]],
   ['vkformat_3',['vkFormat',['../structktxTextureCreateInfo.html#abc50403eebde1f027704eadc05d304c7',1,'ktxTextureCreateInfo']]],

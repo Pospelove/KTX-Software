@@ -6,5 +6,5 @@ var searchData=
   ['size_3',['size',['../structktxStream.html#ab3d4a868dd03d0fa92cdb5e5fd99ba50',1,'ktxStream']]],
   ['skip_4',['skip',['../structktxStream.html#ad224d1f8e4291a2e66e090b3c6df3698',1,'ktxStream']]],
   ['strings_2ec_5',['strings.c',['../strings_8c.html',1,'']]],
-  ['structsize_6',['structSize',['../structktxAstcParams.html#a51fe881fb2eae346ba017f7f55a1d642',1,'ktxAstcParams::structSize()'],['../structktxBasisParams.html#a51fe881fb2eae346ba017f7f55a1d642',1,'ktxBasisParams::structSize()']]]
+  ['structsize_6',['structSize',['../structktxAstcParams.html#a51fe881fb2eae346ba017f7f55a1d642',1,'ktxAstcParams::structSize'],['../structktxBasisParams.html#a51fe881fb2eae346ba017f7f55a1d642',1,'ktxBasisParams::structSize']]]
 ];

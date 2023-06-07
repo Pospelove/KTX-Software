@@ -26,8 +26,8 @@ var NAVTREE =
 [
   [ "libktx - The KTX Library", "index.html", [
     [ "Introduction", "index.html", "index" ],
-    [ "LICENSE file for the KhronosGroup/KTX-Software project", "license.html", [
-      [ "Special Cases", "license.html#autotoc_md3", null ]
+    [ "LICENSE file for the KhronosGroup/KTX-Software project", "md_LICENSE.html", [
+      [ "Special Cases", "md_LICENSE.html#autotoc_md3", null ]
     ] ],
     [ "Revision History", "libktx_history.html", [
       [ "Version 4.0", "libktx_history.html#v8", null ],
