@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="ktx_logo_200.png"/></td>
   <td id="projectalign">
-   <div id="projectname">libktx - The KTX Library<span id="projectnumber">&#160;4.2.0</span>
+   <div id="projectname">libktx - The KTX Library<span id="projectnumber">&#160;4.3.0</span>
    </div>
    <div id="projectbrief">Libraries and tools to create and read KTX image texture files.</div>
   </td>
@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('strings_8c.html',''); initResizable();
 <p>Functions to return a string corresponding to various enumerations.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="ktx_8h.html">ktx.h</a>&quot;</code><br />
+<code>#include &quot;basis_sgd.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -118,11 +119,52 @@ Functions</h2></td></tr>
 <tr class="memitem:a68c7368105d35f01b54573f22ecbe5fb"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="strings_8c.html#a68c7368105d35f01b54573f22ecbe5fb">ktxSupercompressionSchemeString</a> (<a class="el" href="ktx_8h.html#a011cf6c6de4e1acd2307ec7d24ee5daa">ktxSupercmpScheme</a> scheme)</td></tr>
 <tr class="memdesc:a68c7368105d35f01b54573f22ecbe5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string corresponding to a supercompressionScheme enumeration.  <br /></td></tr>
 <tr class="separator:a68c7368105d35f01b54573f22ecbe5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9077e4635ae86d84ec8bcb025d6b373"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="strings_8c.html#aa9077e4635ae86d84ec8bcb025d6b373">ktxBUImageFlagsBitString</a> (ktx_uint32_t bit_index, bool bit_value)</td></tr>
+<tr class="memdesc:aa9077e4635ae86d84ec8bcb025d6b373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a string corresponding to a bu_image_flags bit.  <br /></td></tr>
+<tr class="separator:aa9077e4635ae86d84ec8bcb025d6b373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to return a string corresponding to various enumerations. </p>
 <dl class="section author"><dt>Author</dt><dd>Mark Callow, HI Corporation </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="aa9077e4635ae86d84ec8bcb025d6b373" name="aa9077e4635ae86d84ec8bcb025d6b373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9077e4635ae86d84ec8bcb025d6b373">&#9670;&#160;</a></span>ktxBUImageFlagsBitString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * ktxBUImageFlagsBitString </td>
+          <td>(</td>
+          <td class="paramtype">ktx_uint32_t&#160;</td>
+          <td class="paramname"><em>bit_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bit_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a string corresponding to a bu_image_flags bit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bit_index</td><td>the bu_image_flag bit to test. </td></tr>
+    <tr><td class="paramname">bit_value</td><td>the bu_image_flag bit value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the message string or NULL otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="a252d7741a00562fbe2fd9d91d54d873b" name="a252d7741a00562fbe2fd9d91d54d873b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a252d7741a00562fbe2fd9d91d54d873b">&#9670;&#160;</a></span>ktxErrorString()</h2>
 

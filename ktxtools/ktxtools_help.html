@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libktx - The KTX Library: ktxVulkanFunctions Struct Reference</title>
+<title>Khronos Texture Tools: ktx help</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="ktx_logo_200.png"/></td>
   <td id="projectalign">
-   <div id="projectname">libktx - The KTX Library<span id="projectnumber">&#160;4.3.0</span>
+   <div id="projectname">Khronos Texture Tools<span id="projectnumber">&#160;4.3.0</span>
    </div>
    <div id="projectbrief">Libraries and tools to create and read KTX image texture files.</div>
   </td>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('structktxVulkanFunctions.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('ktxtools_help.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,24 +96,66 @@ $(document).ready(function(){initNavTree('structktxVulkanFunctions.html',''); in
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">ktxVulkanFunctions Struct Reference</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">ktx help</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Struct for applications to pass Vulkan function pointers to the ktxTexture_VkUpload functions via a <a class="el" href="structktxVulkanDeviceInfo.html" title="Struct for passing information about the Vulkan device on which to create images to the texture image...">ktxVulkanDeviceInfo</a> struct.  
- <a href="structktxVulkanFunctions.html#details">More...</a></p>
-
-<p><code>#include &lt;ktxvulkan.h&gt;</code></p>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Struct for applications to pass Vulkan function pointers to the ktxTexture_VkUpload functions via a <a class="el" href="structktxVulkanDeviceInfo.html" title="Struct for passing information about the Vulkan device on which to create images to the texture image...">ktxVulkanDeviceInfo</a> struct. </p>
-<p><code>vkGetInstanceProcAddr</code> and <code>vkGetDeviceProcAddr</code> should be set, others are optional. </p>
+<div class="textblock"><p>Display help information about the ktx tool.</p>
+<h1><a class="anchor" id="ktxtools_help_synopsis"></a>
+SYNOPSIS</h1>
+<p>ktx help [option...] <em></em>[command]</p>
+<h1><a class="anchor" id="ktxtools_help_description"></a>
+DESCRIPTION</h1>
+<p><b>ktx</b> <b>help</b> displays the man page of a specific ktx command specified as the <em>command</em> argument. On windows systems the man pages are opened with the system default browser in html format. On systems derived from Unix the man pages are opened with the man command.</p>
+<p>To support custom install locations the tool first tries to use the man files relative to the executable and falls back to the system man pages.</p>
+<p>The following options are available: </p><dl>
+<dt>command </dt>
+<dd>Specifies which command's man page will be displayed. If the command option is missing the main ktx tool man page will be displayed. Possible options are: <br  />
+ <a class="el" href="ktxtools_create.html">create</a> <br  />
+ <a class="el" href="ktxtools_extract.html">extract</a> <br  />
+ <a class="el" href="ktxtools_encode.html">encode</a> <br  />
+ <a class="el" href="ktxtools_transcode.html">transcode</a> <br  />
+ <a class="el" href="ktxtools_info.html">info</a> <br  />
+ <a class="el" href="ktxtools_validate.html">validate</a> <br  />
+ <a class="el" href="ktxtools_help.html">help</a>  </dd>
+</dl>
+<p><dl>
+<dt>-h, &ndash;help </dt>
+<dd>Print this usage message and exit. </dd>
+<dt>-v, &ndash;version </dt>
+<dd>Print the version number of this program and exit. </dd>
+</dl>
+</p>
+<h1><a class="anchor" id="ktxtools_help_exitstatus"></a>
+EXIT STATUS</h1>
+<p><ul>
+<li>0 - Success</li>
+<li>1 - Command line error</li>
+<li>2 - IO failure</li>
+<li>3 - Invalid input file</li>
+<li>4 - Runtime or library error</li>
+<li>5 - Not supported state or operation</li>
+<li>6 - Requested feature is not yet implemented </li>
+</ul>
+</p>
+<h1><a class="anchor" id="ktxtools_help_history"></a>
+HISTORY</h1>
+<dl class="section user"><dt>Version 4.0</dt><dd><ul>
+<li>Initial version</li>
+</ul>
+</dd></dl>
+<h1><a class="anchor" id="ktxtools_help_author"></a>
+AUTHOR</h1>
+<ul>
+<li>Mátyás Császár [Vader], RasterGrid www.rastergrid.com</li>
+<li>Daniel Rákos, RasterGrid www.rastergrid.com </li>
+</ul>
 </div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="structktxVulkanFunctions.html">ktxVulkanFunctions</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
   </ul>
 </div>

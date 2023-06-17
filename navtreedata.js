@@ -27,13 +27,6 @@ var NAVTREE =
   [ "Khronos Texture Software", "index.html", [
     [ "Abstract", "md_pkgdoc_2pages.html", null ],
     [ "libktx", "libktx_main.html", null ],
-    [ "KTX Tools", "ktxtools.html", [
-      [ "ktx2check", "ktxtools.html#autotoc_md2", null ],
-      [ "ktx2ktx2", "ktxtools.html#autotoc_md3", null ],
-      [ "ktxinfo", "ktxtools.html#autotoc_md4", null ],
-      [ "ktxsc", "ktxtools.html#autotoc_md5", null ],
-      [ "toktx", "ktxtools.html#autotoc_md6", null ]
-    ] ],
     [ "Authors", "authors.html", null ],
     [ "To Do List", "md_TODO.html", [
       [ "library", "md_TODO.html#autotoc_md9", null ],

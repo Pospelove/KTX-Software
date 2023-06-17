@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khronos Texture Tools: ktx2check</title>
+<title>Khronos Texture Tools: ktx extract</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('ktx2check.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('ktxtools_extract.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,23 +97,51 @@ $(document).ready(function(){initNavTree('ktx2check.html',''); initResizable(); 
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">ktx2check</div></div>
+  <div class="headertitle"><div class="title">ktx extract</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Check the validity of a KTX 2 file.</p>
-<h1><a class="anchor" id="ktx2check_synopsis"></a>
+<div class="textblock"><p>Extract selected images from a KTX2 file.</p>
+<h1><a class="anchor" id="ktxtools_extract_synopsis"></a>
 SYNOPSIS</h1>
-<p>ktx2check [options] [<em>infile</em> ...]</p>
-<h1><a class="anchor" id="ktx2check_description"></a>
+<p>ktx extract [option...] <em>input-file</em> <em>output-path</em> </p>
+<h1><a class="anchor" id="ktxtools_extract_description"></a>
 DESCRIPTION</h1>
-<p><b>ktx2check</b> validates Khronos texture format version 2 files (KTX2). It reads each named <em>infile</em> and validates it writing to stdout messages about any issues found. When <b>infile</b> is not specified, it validates a single file from stdin.</p>
+<p><b>ktx</b> <b>extract</b> can extract one or multiple images from the KTX2 file specified as the <em>input-file</em> argument and, based on the format, save them as Raw, EXR or PNG image files to the <em>output-path</em>. If the input file is invalid the first encountered validation error is displayed to the stderr and the command exits with the relevant non-zero status code.</p>
+<p>The <em>output-path</em> is interpreted as output filepath for single and output directory for multi-image extracts. When extracting multiple images with either '&ndash;all' or any of the 'all' args the following naming is used for each output file: </p><pre>output-path/output_level{}_face{}_layer{}_depth{}.extension</pre><ul>
+<li>Where the <em>_level{}</em> part is only present if the source texture has more than 1 level</li>
+<li>Where the <em>_face{}</em> part is only present if the source texture is cubemap or cubemap array (Cubemap)</li>
+<li>Where the <em>_layer{}</em> part is only present if the source texture is an array texture (Array)</li>
+<li>Where the <em>_depth{}</em> part is only present if the source texture baseDepth is more than 1 (3D)</li>
+<li>Where the <em>{}</em> is replaced with the numeric index of the given component starting from 0</li>
+<li>Where the <em>extension</em> part is "raw", "png" or "exr" based on the export format<br  />
+ Note: The inclusion of the optional parts are determined by the source texture regardless of which images are requested.</li>
+</ul>
+<p>For non-raw exports the output image format is chosen to be the smallest related lossless format:</p><ul>
+<li>_UNORM formats exported as PNG with RGB/RGBA 8/16 bit</li>
+<li>_SINT/_UINT formats exported as EXR with R/RG/RGB/RGBA Half/Float/UInt</li>
+<li>_SFLOAT/_UFLOAT formats exported as EXR with R/RG/RGB/RGBA Half/Float/UInt</li>
+<li>D16_UNORM exported as PNG with luminance (Gray) 16 bit</li>
+<li>Other Depth/Stencil formats exported as EXR with D/S/DS Half/Float</li>
+</ul>
 <p>The following options are available: </p><dl>
-<dt>-q, &ndash;quiet </dt>
-<dd>Validate silently. Indicate valid or invalid via exit code. </dd>
-<dt>-m &lt;num&gt;, &ndash;max-issues &lt;num&gt; </dt>
-<dd>Set the maximum number of issues to be reported per file provided -q is not set. </dd>
-<dt>-w, &ndash;warn-as-error </dt>
-<dd>Treat warnings as errors. Changes exit code from success to error. </dd>
+<dt>&ndash;transcode &lt;target&gt; </dt>
+<dd>Transcode the texture to the target format before executing the extract. Requires the input file to be transcodable (it must be either BasisLZ supercompressed or has UASTC color model in the DFD). This option matches the functionality of the <a class="el" href="ktxtools_transcode.html">ktx transcode</a> command. If the target option is not set the r8, rg8, rgb8 or rgba8 target will be selected based on the number of channels in the input texture. Block compressed transcode targets can only be saved in raw format. Case-insensitive. Possible options are: etc-rgb | etc-rgba | eac-r11 | eac-rg11 | bc1 | bc3 | bc4 | bc5 | bc7 | astc | r8 | rg8 | rgb8 | rgba8. etc-rgb is ETC1; etc-rgba, eac-r11 and eac-rg11 are ETC2.  </dd>
+</dl>
+<dl>
+<dt>&ndash;uri &lt;uri&gt; </dt>
+<dd>KTX Fragment URI. <a href="https://registry.khronos.org/KTX/specs/2.0/ktx-frag.html">https://registry.khronos.org/KTX/specs/2.0/ktx-frag.html</a>  </dd>
+<dt>&ndash;level [0-9]+ | all </dt>
+<dd>Level to extract. When 'all' is used every level is exported. Defaults to 0.  </dd>
+<dt>&ndash;layer [0-9]+ | all </dt>
+<dd>Layer to extract. When 'all' is used every layer is exported. Defaults to 0.  </dd>
+<dt>&ndash;face [0-9]+ | all </dt>
+<dd>Face to extract. When 'all' is used every face is exported. Defaults to 0.  </dd>
+<dt>&ndash;depth [0-9]+ | all </dt>
+<dd>Depth slice to extract. When 'all' is used every depth is exported. Defaults to 0.  </dd>
+<dt>&ndash;all </dt>
+<dd>Extract every image slice from the texture.  </dd>
+<dt>&ndash;raw </dt>
+<dd>Extract the raw image data without any conversion.  </dd>
 </dl>
 <p><dl>
 <dt>-h, &ndash;help </dt>
@@ -122,18 +150,30 @@ DESCRIPTION</h1>
 <dd>Print the version number of this program and exit. </dd>
 </dl>
 </p>
-<h1><a class="anchor" id="ktx2check_exitstatus"></a>
+<h1><a class="anchor" id="ktxtools_extract_exitstatus"></a>
 EXIT STATUS</h1>
-<p><b>ktx2check</b> exits 0 on success, 1 on command line errors and 2 on validation errors.</p>
-<h1><a class="anchor" id="ktx2check_history"></a>
+<p><ul>
+<li>0 - Success</li>
+<li>1 - Command line error</li>
+<li>2 - IO failure</li>
+<li>3 - Invalid input file</li>
+<li>4 - Runtime or library error</li>
+<li>5 - Not supported state or operation</li>
+<li>6 - Requested feature is not yet implemented </li>
+</ul>
+</p>
+<h1><a class="anchor" id="ktxtools_extract_history"></a>
 HISTORY</h1>
 <dl class="section user"><dt>Version 4.0</dt><dd><ul>
-<li>Initial version.</li>
+<li>Initial version</li>
 </ul>
 </dd></dl>
-<h1><a class="anchor" id="ktx2check_author"></a>
+<h1><a class="anchor" id="ktxtools_extract_author"></a>
 AUTHOR</h1>
-<p>Mark Callow, Edgewise Consulting www.edgewise-consulting.com </p>
+<ul>
+<li>Mátyás Császár [Vader], RasterGrid www.rastergrid.com</li>
+<li>Daniel Rákos, RasterGrid www.rastergrid.com </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

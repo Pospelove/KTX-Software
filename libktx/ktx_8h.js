@@ -64,6 +64,8 @@ var ktx_8h =
       [ "KTX_UNSUPPORTED_TEXTURE_TYPE", "ktx_8h.html#a7780d97ec4de6aa30c4726fb71e3116cad3d82ba3467063bec92486a94a38d21d", null ],
       [ "KTX_UNSUPPORTED_FEATURE", "ktx_8h.html#a7780d97ec4de6aa30c4726fb71e3116ca04808a4c3abddb237d2a8cf903205496", null ],
       [ "KTX_LIBRARY_NOT_LINKED", "ktx_8h.html#a7780d97ec4de6aa30c4726fb71e3116caac88f0051f9b5c217f3f53128e6960ef", null ],
+      [ "KTX_DECOMPRESS_LENGTH_ERROR", "ktx_8h.html#a7780d97ec4de6aa30c4726fb71e3116ca37dce54f5aefa409567d7c08e36d1d83", null ],
+      [ "KTX_DECOMPRESS_CHECKSUM_ERROR", "ktx_8h.html#a7780d97ec4de6aa30c4726fb71e3116ca349391a68adb9c8c4a71dd50d6e96745", null ],
       [ "KTX_ERROR_MAX_ENUM", "ktx_8h.html#a7780d97ec4de6aa30c4726fb71e3116cabb7ad088582cd16709a27679312363ae", null ]
     ] ],
     [ "ktx_pack_astc_block_dimension_e", "ktx_8h.html#a1873d492a1b1fc5fd3296192fce3e9d5", [
@@ -133,6 +135,7 @@ var ktx_8h =
       [ "KTX_SS_NONE", "ktx_8h.html#a011cf6c6de4e1acd2307ec7d24ee5daaa9559585b30aa7fe5d510753ceae6fcc6", null ],
       [ "KTX_SS_BASIS_LZ", "ktx_8h.html#a011cf6c6de4e1acd2307ec7d24ee5daaaf66da31ed897385538dab6c591e5bf5c", null ],
       [ "KTX_SS_ZSTD", "ktx_8h.html#a011cf6c6de4e1acd2307ec7d24ee5daaa29f7da526697257766534b667fd706ef", null ],
+      [ "KTX_SS_ZLIB", "ktx_8h.html#a011cf6c6de4e1acd2307ec7d24ee5daaa01c22adc03102420ef016d614cb5e0f5", null ],
       [ "KTX_SUPERCOMPRESSION_BASIS", "ktx_8h.html#a011cf6c6de4e1acd2307ec7d24ee5daaa40c3320ec64db332ad39012929ea4d7a", null ],
       [ "KTX_SUPERCOMPRESSION_ZSTD", "ktx_8h.html#a011cf6c6de4e1acd2307ec7d24ee5daaaa36d92f52c18c80530eed96cbb0b1049", null ]
     ] ],

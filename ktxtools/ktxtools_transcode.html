@@ -1,16 +1,11 @@
-<!-- HTML header for doxygen 1.8.17-->
-<!--
-  Copyright 2018-2020 The Khronos Group Inc.
-  SPDX-License-Identifier: Apache-2.0
--->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Khronos Texture Software: KTX Tools</title>
+<title>Khronos Texture Tools: ktx transcode</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,39 +22,20 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<!-- The following stylesheet and scripts are so we can use highlight.js
-     to highlight the JS fragments in the JS binding documentation.
--->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script>
-$(function() {
-    $(".fragment").each(function(i,node) {
-        var $node = $(node);
-        $node.html("<pre><code class='" +
-                   $node.attr("class")+"'>" + 
-                   $node.text()+"</code></pre>");
-        hljs.highlightBlock(node);
-    });
-});
-</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
+ <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="ktx_logo_200.png"/></td>
-  <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Khronos Texture Software
-   &#160;<span id="projectnumber">4.2.0</span>
+  <td id="projectalign">
+   <div id="projectname">Khronos Texture Tools<span id="projectnumber">&#160;4.3.0</span>
    </div>
    <div id="projectbrief">Libraries and tools to create and read KTX image texture files.</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
           <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
           <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
@@ -95,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('ktxtools.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('ktxtools_transcode.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -121,41 +97,57 @@ $(document).ready(function(){initNavTree('ktxtools.html',''); initResizable(); }
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">KTX Tools</div></div>
+  <div class="headertitle"><div class="title">ktx transcode</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md2"></a>
-ktx2check</h1>
-<ul>
-<li><a class="elRef" href="ktxtools/ktx2check.html">ktx2check</a> reference page.</li>
-<li><a class="elRef" href="ktxtools/ktx2check.html#ktx2check_history">HISTORY</a>.</li>
+<div class="textblock"><p>Transcode a KTX2 file.</p>
+<h1><a class="anchor" id="ktxtools_transcode_synopsis"></a>
+SYNOPSIS</h1>
+<p>ktx transcode [option...] <em>input-file</em> <em>output-file</em> </p>
+<h1><a class="anchor" id="ktxtools_transcode_description"></a>
+DESCRIPTION</h1>
+<p><b>ktx</b> <b>transcode</b> can transcode the KTX file specified as the <em>input-file</em> argument, optionally supercompress the result, and save it as the <em>output-file</em>. The input file must be transcodable (it must be either BasisLZ supercompressed or has UASTC color model in the DFD). If the input file is invalid the first encountered validation error is displayed to the stderr and the command exits with the relevant non-zero status code.</p>
+<p>The following options are available: </p><dl>
+<dt>&ndash;target &lt;target&gt; </dt>
+<dd>Target transcode format. If the target option is not set the r8, rg8, rgb8 or rgba8 target will be selected based on the number of channels in the input texture. Block compressed transcode targets can only be saved in raw format. Case-insensitive. Possible options are: etc-rgb | etc-rgba | eac-r11 | eac-rg11 | bc1 | bc3 | bc4 | bc5 | bc7 | astc | r8 | rg8 | rgb8 | rgba8. etc-rgb is ETC1; etc-rgba, eac-r11 and eac-rg11 are ETC2.  </dd>
+</dl>
+<p><dl>
+<dt>&ndash;zstd &lt;level&gt; </dt>
+<dd>Supercompress the data with Zstandard. Cannot be used with ETC1S / BasisLZ format. Level range is [1,22]. Lower levels give faster but worse compression. Values above 20 should be used with caution as they require more memory.  </dd>
+<dt>&ndash;zlib &lt;level&gt; </dt>
+<dd>Supercompress the data with ZLIB. Cannot be used with ETC1S / BasisLZ format. Level range is [1,9]. Lower levels give faster but worse compression.  </dd>
+</dl>
+ <dl>
+<dt>-h, &ndash;help </dt>
+<dd>Print this usage message and exit. </dd>
+<dt>-v, &ndash;version </dt>
+<dd>Print the version number of this program and exit. </dd>
+</dl>
+</p>
+<h1><a class="anchor" id="ktxtools_transcode_exitstatus"></a>
+EXIT STATUS</h1>
+<p><ul>
+<li>0 - Success</li>
+<li>1 - Command line error</li>
+<li>2 - IO failure</li>
+<li>3 - Invalid input file</li>
+<li>4 - Runtime or library error</li>
+<li>5 - Not supported state or operation</li>
+<li>6 - Requested feature is not yet implemented </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
-ktx2ktx2</h1>
-<ul>
-<li><a class="elRef" href="ktxtools/ktx2ktx2.html">ktx2ktx2</a> reference page.</li>
-<li><a class="elRef" href="ktxtools/ktx2ktx2.html#ktx2ktx2_history">HISTORY</a>.</li>
+</p>
+<h1><a class="anchor" id="ktxtools_transcode_history"></a>
+HISTORY</h1>
+<dl class="section user"><dt>Version 4.0</dt><dd><ul>
+<li>Initial version</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
-ktxinfo</h1>
+</dd></dl>
+<h1><a class="anchor" id="ktxtools_transcode_author"></a>
+AUTHOR</h1>
 <ul>
-<li><a class="elRef" href="ktxtools/ktxinfo.html">ktxinfo</a> reference page.</li>
-<li><a class="elRef" href="ktxtools/ktxinfo.html#ktxinfo_history">HISTORY</a>.</li>
+<li>Mátyás Császár [Vader], RasterGrid www.rastergrid.com</li>
+<li>Daniel Rákos, RasterGrid www.rastergrid.com </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md5"></a>
-ktxsc</h1>
-<ul>
-<li><a class="elRef" href="ktxtools/ktxsc.html">ktxsc</a> reference page.</li>
-<li><a class="elRef" href="ktxtools/ktxsc.html#ktxsc_history">HISTORY</a>.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md6"></a>
-toktx</h1>
-<ul>
-<li><a class="elRef" href="ktxtools/toktx.html">toktx</a> reference page.</li>
-<li><a class="elRef" href="ktxtools/toktx.html#toktx_history">HISTORY</a>.</li>
-</ul>
-<hr  />
- <dl class="section user"><dt>This page last modified $Date: Sat Feb 19 18:00:49 2022 +0900 $</dt><dd></dd></dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

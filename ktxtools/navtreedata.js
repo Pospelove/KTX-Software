@@ -59,6 +59,62 @@ var NAVTREE =
       [ "EXIT STATUS", "toktx.html#toktx_exitstatus", null ],
       [ "HISTORY", "toktx.html#toktx_history", null ],
       [ "AUTHOR", "toktx.html#toktx_author", null ]
+    ] ],
+    [ "ktx", "ktxtools.html", [
+      [ "SYNOPSIS", "ktxtools.html#ktxtools_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools.html#ktxtools_description", null ],
+      [ "EXIT STATUS", "ktxtools.html#ktxtools_exitstatus", null ],
+      [ "HISTORY", "ktxtools.html#ktxtools_history", null ],
+      [ "AUTHOR", "ktxtools.html#ktxtools_author", null ]
+    ] ],
+    [ "ktx create", "ktxtools_create.html", [
+      [ "SYNOPSIS", "ktxtools_create.html#ktxtools_create_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools_create.html#ktxtools_create_description", null ],
+      [ "EXIT STATUS", "ktxtools_create.html#ktxtools_create_exitstatus", null ],
+      [ "HISTORY", "ktxtools_create.html#ktxtools_create_history", null ],
+      [ "AUTHOR", "ktxtools_create.html#ktxtools_create_author", null ]
+    ] ],
+    [ "ktx encode", "ktxtools_encode.html", [
+      [ "SYNOPSIS", "ktxtools_encode.html#ktxtools_encode_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools_encode.html#ktxtools_encode_description", null ],
+      [ "EXIT STATUS", "ktxtools_encode.html#ktxtools_encode_exitstatus", null ],
+      [ "HISTORY", "ktxtools_encode.html#ktxtools_encode_history", null ],
+      [ "AUTHOR", "ktxtools_encode.html#ktxtools_encode_author", null ]
+    ] ],
+    [ "ktx extract", "ktxtools_extract.html", [
+      [ "SYNOPSIS", "ktxtools_extract.html#ktxtools_extract_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools_extract.html#ktxtools_extract_description", null ],
+      [ "EXIT STATUS", "ktxtools_extract.html#ktxtools_extract_exitstatus", null ],
+      [ "HISTORY", "ktxtools_extract.html#ktxtools_extract_history", null ],
+      [ "AUTHOR", "ktxtools_extract.html#ktxtools_extract_author", null ]
+    ] ],
+    [ "ktx help", "ktxtools_help.html", [
+      [ "SYNOPSIS", "ktxtools_help.html#ktxtools_help_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools_help.html#ktxtools_help_description", null ],
+      [ "EXIT STATUS", "ktxtools_help.html#ktxtools_help_exitstatus", null ],
+      [ "HISTORY", "ktxtools_help.html#ktxtools_help_history", null ],
+      [ "AUTHOR", "ktxtools_help.html#ktxtools_help_author", null ]
+    ] ],
+    [ "ktx info", "ktxtools_info.html", [
+      [ "SYNOPSIS", "ktxtools_info.html#ktxtools_info_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools_info.html#ktxtools_info_description", null ],
+      [ "EXIT STATUS", "ktxtools_info.html#ktxtools_info_exitstatus", null ],
+      [ "HISTORY", "ktxtools_info.html#ktxtools_info_history", null ],
+      [ "AUTHOR", "ktxtools_info.html#ktxtools_info_author", null ]
+    ] ],
+    [ "ktx transcode", "ktxtools_transcode.html", [
+      [ "SYNOPSIS", "ktxtools_transcode.html#ktxtools_transcode_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools_transcode.html#ktxtools_transcode_description", null ],
+      [ "EXIT STATUS", "ktxtools_transcode.html#ktxtools_transcode_exitstatus", null ],
+      [ "HISTORY", "ktxtools_transcode.html#ktxtools_transcode_history", null ],
+      [ "AUTHOR", "ktxtools_transcode.html#ktxtools_transcode_author", null ]
+    ] ],
+    [ "ktx validate", "ktxtools_validate.html", [
+      [ "SYNOPSIS", "ktxtools_validate.html#ktxtools_validate_synopsis", null ],
+      [ "DESCRIPTION", "ktxtools_validate.html#ktxtools_validate_description", null ],
+      [ "EXIT STATUS", "ktxtools_validate.html#ktxtools_validate_exitstatus", null ],
+      [ "HISTORY", "ktxtools_validate.html#ktxtools_validate_history", null ],
+      [ "AUTHOR", "ktxtools_validate.html#ktxtools_validate_author", null ]
     ] ]
   ] ]
 ];

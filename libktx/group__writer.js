@@ -17,6 +17,7 @@ var group__writer =
     [ "ktxTexture2_CompressBasisEx", "group__writer.html#ga0e75755e3cc69964e57363dad82ffd77", null ],
     [ "ktxTexture2_Create", "group__writer.html#ga9ff411caf2251c100a581960deaf9bb7", null ],
     [ "ktxTexture2_CreateCopy", "group__writer.html#ga5fcfdc3d237419ab65287639e1f4aeb1", null ],
+    [ "ktxTexture2_DeflateZLIB", "group__writer.html#gaafc3cf2c872ea75be7096b1fc70dfb2c", null ],
     [ "ktxTexture2_DeflateZstd", "group__writer.html#ga08d7222fbf845f25d883ed81c14c6430", null ],
     [ "ktxTexture2_SetImageFromMemory", "group__writer.html#ga01b13c38300016ce36c5b97bf4957d48", null ],
     [ "ktxTexture2_SetImageFromStdioStream", "group__writer.html#ga50a5ecf22586b26977da62cf19a78518", null ],
