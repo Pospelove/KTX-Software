@@ -10,7 +10,6 @@ var structktxTexture2 =
     [ "ktxTexture2_CreateFromNamedFile", "group__reader.html#ga8680560274b31da6f3f07ee911055431", null ],
     [ "ktxTexture2_CreateFromStdioStream", "group__reader.html#gae9de7e23ffe3ae3aeed4cc95c61699e4", null ],
     [ "ktxTexture2_CreateFromStream", "group__reader.html#ga1e865473d23f82fc22a16bb3eadf60ed", null ],
-    [ "ktxTexture2_DeflateZLIB", "group__writer.html#gaafc3cf2c872ea75be7096b1fc70dfb2c", null ],
     [ "ktxTexture2_DeflateZstd", "group__writer.html#ga08d7222fbf845f25d883ed81c14c6430", null ],
     [ "ktxTexture2_Destroy", "group__reader.html#ga01ec49abe73b77f2f8db99b5d9cf46d9", null ],
     [ "ktxTexture2_GetColorModel_e", "group__reader.html#ga7200d548b480a3abb69c206f530c0669", null ],

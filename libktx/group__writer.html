@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="ktx_logo_200.png"/></td>
   <td id="projectalign">
-   <div id="projectname">libktx - The KTX Library<span id="projectnumber">&#160;4.3.0</span>
+   <div id="projectname">libktx - The KTX Library<span id="projectnumber">&#160;4.2.1</span>
    </div>
    <div id="projectbrief">Libraries and tools to create and read KTX image texture files.</div>
   </td>
@@ -180,9 +180,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga08d7222fbf845f25d883ed81c14c6430"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ktx_8h.html#ad2efa40e38ebae48371375db92d34eaa">KTX_error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__writer.html#ga08d7222fbf845f25d883ed81c14c6430">ktxTexture2_DeflateZstd</a> (<a class="el" href="structktxTexture2.html">ktxTexture2</a> *This, ktx_uint32_t compressionLevel)</td></tr>
 <tr class="memdesc:ga08d7222fbf845f25d883ed81c14c6430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deflate the data in a <a class="el" href="structktxTexture2.html" title="Class representing a KTX version 2 format texture.">ktxTexture2</a> object using Zstandard.  <br /></td></tr>
 <tr class="separator:ga08d7222fbf845f25d883ed81c14c6430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaafc3cf2c872ea75be7096b1fc70dfb2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ktx_8h.html#ad2efa40e38ebae48371375db92d34eaa">KTX_error_code</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__writer.html#gaafc3cf2c872ea75be7096b1fc70dfb2c">ktxTexture2_DeflateZLIB</a> (<a class="el" href="structktxTexture2.html">ktxTexture2</a> *This, ktx_uint32_t compressionLevel)</td></tr>
-<tr class="memdesc:gaafc3cf2c872ea75be7096b1fc70dfb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deflate the data in a <a class="el" href="structktxTexture2.html" title="Class representing a KTX version 2 format texture.">ktxTexture2</a> object using miniz (ZLIB).  <br /></td></tr>
-<tr class="separator:gaafc3cf2c872ea75be7096b1fc70dfb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Write KTX-formatted data. </p>
@@ -1123,44 +1120,6 @@ Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">KTX_OUT_OF_MEMORY</td><td>Not enough memory for the texture data. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gaafc3cf2c872ea75be7096b1fc70dfb2c" name="gaafc3cf2c872ea75be7096b1fc70dfb2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaafc3cf2c872ea75be7096b1fc70dfb2c">&#9670;&#160;</a></span>ktxTexture2_DeflateZLIB()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ktx_8h.html#ad2efa40e38ebae48371375db92d34eaa">KTX_error_code</a> ktxTexture2_DeflateZLIB </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structktxTexture2.html">ktxTexture2</a> *&#160;</td>
-          <td class="paramname"><em>This</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ktx_uint32_t&#160;</td>
-          <td class="paramname"><em>compressionLevel</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Deflate the data in a <a class="el" href="structktxTexture2.html" title="Class representing a KTX version 2 format texture.">ktxTexture2</a> object using miniz (ZLIB). </p>
-<p>The texture's levelIndex, dataSize, DFD and supercompressionScheme will all be updated after successful deflation to reflect the deflated data.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">This</td><td>pointer to the <a class="el" href="structktxTexture2.html" title="Class representing a KTX version 2 format texture.">ktxTexture2</a> object of interest. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">compressionLevel</td><td>set speed vs compression ratio trade-off. Values between 1 and 9 are accepted. The lower the level the faster. </td></tr>
   </table>
   </dd>
 </dl>
