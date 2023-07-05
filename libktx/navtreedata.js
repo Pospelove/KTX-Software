@@ -24,10 +24,17 @@
 */
 var NAVTREE =
 [
-  [ "libktx - The KTX Library", "index.html", [
-    [ "Introduction", "index.html", "index" ],
-    [ "LICENSE file for the KhronosGroup/KTX-Software project", "md_LICENSE.html", [
-      [ "Special Cases", "md_LICENSE.html#autotoc_md3", null ]
+  [ "libktx Reference", "index.html", [
+    [ "Usage Overview", "index.html#overview", [
+      [ "Reading a KTX file for non-GL and non-Vulkan Use", "index.html#readktx", null ],
+      [ "Creating a GL texture object from a KTX file.", "index.html#createGL", null ],
+      [ "Creating a Vulkan image object from a KTX file.", "index.html#createVulkan", null ],
+      [ "Extracting Metadata", "index.html#subsection", null ],
+      [ "Writing a KTX or KTX2 file", "index.html#writektx", null ],
+      [ "Modifying a KTX file", "index.html#modifyktx", null ],
+      [ "Writing a Basis-compressed Universal Texture", "index.html#autotoc_md0", null ],
+      [ "Transcoding a BasisLZ/ETC1S or UASTC-compressed Texture", "index.html#autotoc_md1", null ],
+      [ "Writing an ASTC-Compressed Texture", "index.html#autotoc_md2", null ]
     ] ],
     [ "Revision History", "libktx_history.html", [
       [ "Version 4.0", "libktx_history.html#v8", null ],
@@ -40,7 +47,6 @@ var NAVTREE =
       [ "Version 1.0", "libktx_history.html#v1", null ]
     ] ],
     [ "Deprecated List", "deprecated.html", null ],
-    [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Fields", "functions.html", [
@@ -54,7 +60,7 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -62,14 +68,18 @@ var NAVTREE =
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ],
-    [ "Examples", "examples.html", "examples" ]
+    [ "Examples", "examples.html", "examples" ],
+    [ "Package", "../index.html", null ],
+    [ "KTX Tools Reference", "../ktxtools/index.html", null ],
+    [ "KTX Javascript Wrappers Reference", "../ktxjswrappers/index.html", null ],
+    [ "License", "../license.html", null ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"ktx_8h.html#a8f70163f537a794c472479bc5c1905e9a3f3681d3e1feb7fb6707a5b3aa1366b1"
+"../index.html",
+"ktx_8h.html#a7ca1ab524f2161c1facbb716f4cfab00"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -24,13 +24,63 @@
 */
 var NAVTREE =
 [
-  [ "Khronos Texture Tools", "index.html", [
-    [ "ktxinfo", "ktxinfo.html", [
-      [ "SYNOPSIS", "ktxinfo.html#ktxinfo_synopsis", null ],
-      [ "DESCRIPTION", "ktxinfo.html#ktxinfo_description", null ],
-      [ "EXIT STATUS", "ktxinfo.html#ktxinfo_exitstatus", null ],
-      [ "HISTORY", "ktxinfo.html#ktxinfo_history", null ],
-      [ "AUTHOR", "ktxinfo.html#ktxinfo_author", null ]
+  [ "KTX Tools Reference", "index.html", [
+    [ "ktx", "ktx.html", [
+      [ "ktx Overview", "index.html#autotoc_md0", null ],
+      [ "SYNOPSIS", "ktx.html#ktx_synopsis", null ],
+      [ "DESCRIPTION", "ktx.html#ktx_description", null ],
+      [ "EXIT STATUS", "ktx.html#ktx_exitstatus", null ],
+      [ "HISTORY", "ktx.html#ktx_history", null ],
+      [ "AUTHOR", "ktx.html#ktx_author", null ]
+    ] ],
+    [ "ktx create", "ktx_create.html", [
+      [ "SYNOPSIS", "ktx_create.html#ktx_create_synopsis", null ],
+      [ "DESCRIPTION", "ktx_create.html#ktx_create_description", null ],
+      [ "EXIT STATUS", "ktx_create.html#ktx_create_exitstatus", null ],
+      [ "HISTORY", "ktx_create.html#ktx_create_history", null ],
+      [ "AUTHOR", "ktx_create.html#ktx_create_author", null ]
+    ] ],
+    [ "ktx encode", "ktx_encode.html", [
+      [ "SYNOPSIS", "ktx_encode.html#ktx_encode_synopsis", null ],
+      [ "DESCRIPTION", "ktx_encode.html#ktx_encode_description", null ],
+      [ "EXIT STATUS", "ktx_encode.html#ktx_encode_exitstatus", null ],
+      [ "HISTORY", "ktx_encode.html#ktx_encode_history", null ],
+      [ "AUTHOR", "ktx_encode.html#ktx_encode_author", null ]
+    ] ],
+    [ "ktx extract", "ktx_extract.html", [
+      [ "SYNOPSIS", "ktx_extract.html#ktx_extract_synopsis", null ],
+      [ "DESCRIPTION", "ktx_extract.html#ktx_extract_description", null ],
+      [ "EXIT STATUS", "ktx_extract.html#ktx_extract_exitstatus", null ],
+      [ "HISTORY", "ktx_extract.html#ktx_extract_history", null ],
+      [ "AUTHOR", "ktx_extract.html#ktx_extract_author", null ]
+    ] ],
+    [ "ktx help", "ktx_help.html", [
+      [ "SYNOPSIS", "ktx_help.html#ktx_help_synopsis", null ],
+      [ "DESCRIPTION", "ktx_help.html#ktx_help_description", null ],
+      [ "EXIT STATUS", "ktx_help.html#ktx_help_exitstatus", null ],
+      [ "HISTORY", "ktx_help.html#ktx_help_history", null ],
+      [ "AUTHOR", "ktx_help.html#ktx_help_author", null ]
+    ] ],
+    [ "ktx info", "ktx_info.html", [
+      [ "SYNOPSIS", "ktx_info.html#ktx_info_synopsis", null ],
+      [ "DESCRIPTION", "ktx_info.html#ktx_info_description", null ],
+      [ "EXIT STATUS", "ktx_info.html#ktx_info_exitstatus", null ],
+      [ "HISTORY", "ktx_info.html#ktx_info_history", null ],
+      [ "AUTHOR", "ktx_info.html#ktx_info_author", null ]
+    ] ],
+    [ "ktx transcode", "ktx_transcode.html", [
+      [ "SYNOPSIS", "ktx_transcode.html#ktx_transcode_synopsis", null ],
+      [ "DESCRIPTION", "ktx_transcode.html#ktx_transcode_description", null ],
+      [ "EXIT STATUS", "ktx_transcode.html#ktx_transcode_exitstatus", null ],
+      [ "HISTORY", "ktx_transcode.html#ktx_transcode_history", null ],
+      [ "AUTHOR", "ktx_transcode.html#ktx_transcode_author", null ]
+    ] ],
+    [ "ktx validate", "ktx_validate.html", [
+      [ "SYNOPSIS", "ktx_validate.html#ktx_validate_synopsis", null ],
+      [ "DESCRIPTION", "ktx_validate.html#ktx_validate_description", null ],
+      [ "EXIT STATUS", "ktx_validate.html#ktx_validate_exitstatus", null ],
+      [ "HISTORY", "ktx_validate.html#ktx_validate_history", null ],
+      [ "AUTHOR", "ktx_validate.html#ktx_validate_author", null ]
     ] ],
     [ "ktx2check", "ktx2check.html", [
       [ "SYNOPSIS", "ktx2check.html#ktx2check_synopsis", null ],
@@ -46,6 +96,13 @@ var NAVTREE =
       [ "HISTORY", "ktx2ktx2.html#ktx2ktx2_history", null ],
       [ "AUTHOR", "ktx2ktx2.html#ktx2ktx2_author", null ]
     ] ],
+    [ "ktxinfo", "ktxinfo.html", [
+      [ "SYNOPSIS", "ktxinfo.html#ktxinfo_synopsis", null ],
+      [ "DESCRIPTION", "ktxinfo.html#ktxinfo_description", null ],
+      [ "EXIT STATUS", "ktxinfo.html#ktxinfo_exitstatus", null ],
+      [ "HISTORY", "ktxinfo.html#ktxinfo_history", null ],
+      [ "AUTHOR", "ktxinfo.html#ktxinfo_author", null ]
+    ] ],
     [ "ktxsc", "ktxsc.html", [
       [ "SYNOPSIS", "ktxsc.html#ktxsc_synopsis", null ],
       [ "DESCRIPTION", "ktxsc.html#ktxsc_description", null ],
@@ -59,13 +116,17 @@ var NAVTREE =
       [ "EXIT STATUS", "toktx.html#toktx_exitstatus", null ],
       [ "HISTORY", "toktx.html#toktx_history", null ],
       [ "AUTHOR", "toktx.html#toktx_author", null ]
-    ] ]
+    ] ],
+    [ "Package", "../index.html", null ],
+    [ "libktx Reference", "../libktx/index.html", null ],
+    [ "KTX Javascript Wrappers Reference", "../ktxjswrappers/index.html", null ],
+    [ "License", "../license.html", null ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"../index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
