@@ -25,20 +25,28 @@
 var NAVTREE =
 [
   [ "Khronos Texture Software", "index.html", [
-    [ "Authors", "authors.html", null ],
-    [ "LICENSE file for the KhronosGroup/KTX-Software project", "md_LICENSE.html", [
-      [ "Special Cases", "md_LICENSE.html#autotoc_md3", null ]
+    [ "Abstract", "md_pkgdoc_2pages.html", null ],
+    [ "libktx", "libktx_main.html", null ],
+    [ "KTX Tools", "ktxtools.html", [
+      [ "ktx2check", "ktxtools.html#autotoc_md2", null ],
+      [ "ktx2ktx2", "ktxtools.html#autotoc_md3", null ],
+      [ "ktxinfo", "ktxtools.html#autotoc_md4", null ],
+      [ "ktxsc", "ktxtools.html#autotoc_md5", null ],
+      [ "toktx", "ktxtools.html#autotoc_md6", null ]
     ] ],
-    [ "KTX Tools Reference", "ktxtools/index.html", null ],
-    [ "libktx Reference", "libktx/index.html", null ],
-    [ "KTX Javascript Wrappers Reference", "ktxjswrappers/index.html", null ],
-    [ "", "@ref license", null ]
+    [ "Authors", "authors.html", null ],
+    [ "To Do List", "md_TODO.html", [
+      [ "library", "md_TODO.html#autotoc_md9", null ],
+      [ "library testing", "md_TODO.html#autotoc_md10", null ],
+      [ "toktx", "md_TODO.html#autotoc_md11", null ]
+    ] ],
+    [ "Javascript Bindings", "js_bindings.html", "js_bindings" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"@ref license"
+"authors.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
