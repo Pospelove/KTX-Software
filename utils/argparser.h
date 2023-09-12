@@ -15,16 +15,14 @@
 #include <vector>
 #if defined(_WIN32)
   #include <tchar.h>
-#elif !defined(_TCHAR)
+#else
   #define _TCHAR char
   #define _T(x) x
 #endif
-#if !defined(_tstring)
-  #if defined(_UNICODE)
-    #define _tstring std::wstring
-  #else
-    #define _tstring std::string
-  #endif
+#if defined(_UNICODE)
+  #define _tstring std::wstring
+#else
+  #define _tstring std::string
 #endif
 
 
@@ -39,11 +37,9 @@ class argparser {
   public:
     struct option {
         const char* name;
-        enum has_arg_t {no_argument, required_argument, optional_argument} has_arg;
+        enum {no_argument, required_argument, optional_argument} has_arg;
         int* flag;
         int val;
-
-        option(const char* name, has_arg_t has_arg, int* flag, int val) : name(name), has_arg(has_arg), flag(flag), val(val) {}
     };
 
     _tstring optarg;
