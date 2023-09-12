@@ -13,13 +13,13 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#if defined(_WIN32)
+#if 0
   #include <tchar.h>
 #else
   #define _TCHAR char
   #define _T(x) x
 #endif
-#if defined(_UNICODE)
+#if 0
   #define _tstring std::wstring
 #else
   #define _tstring std::string
