@@ -10,7 +10,8 @@
 #include <stdio.h>
 #ifdef _WIN32
   #include <io.h>
-  #include <tchar.h>
+  #define _TCHAR char
+  #define _T(x) x
   #if _MSC_VER < 1900
     #define snprintf _snprintf
   #endif
