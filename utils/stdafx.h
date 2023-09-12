@@ -8,19 +8,7 @@
 #define _CRT_SECURE_NO_WARNINGS // For _WIN32. Must be before <stdio.h>.
 #include <assert.h>
 #include <stdio.h>
-
-#ifdef UNICODE
-#undef UNICODE
-#endif
-
-#if WIN32
-  #include <io.h>
-  #if _MSC_VER < 1900
-    #define snprintf _snprintf
-  #endif
-#endif
-
-#if 0
+#ifdef _WIN32
   #include <io.h>
   #include <tchar.h>
   #if _MSC_VER < 1900
@@ -47,8 +35,6 @@
   #define _trename rename
   #define _tunlink unlink
   #define _T(x) x
-  #define _tfopen_s fopen_s
-  #define _tmktemp_s _mktemp_s
 #endif
 #include <fcntl.h>
 #include <errno.h>
